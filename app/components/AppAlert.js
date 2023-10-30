@@ -24,16 +24,23 @@ const style = StyleSheet.create({
     width: "100%",
     height: "100%",
     zIndex: 99,
-    opacity: 0.8,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: Colour.white,
 },
   dailogContainer:{
-        width: "70%",
-        padding:20,
+        width: 280,
+        padding:15,
+        borderRadius: 5,
         zIndex:99999,
-        backgroundColor: Colour.primaryColor,
+        backgroundColor: Colour.white,
+        //android shadow
+        elevation: 20,
+        //for ios shadow
+        shadowColor: '#52006A',
+        shadowColor: '#171717',
+        shadowOffset: {width: -2, height: 4},
+        shadowOpacity: 0.2,
+        shadowRadius: 3,
   },
   alertButton:{
     width : 80,
@@ -41,12 +48,12 @@ const style = StyleSheet.create({
     borderRadius: 20,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: Colour.white,
+    backgroundColor: Colour.primaryColor,
     alignSelf: 'flex-end',
     marginTop:20,
   },
   alertButText:{
-    color: Colour.primaryColor,
+    color: Colour.white,
     fontFamily: 'monospace'
   },
   alertNotification:{

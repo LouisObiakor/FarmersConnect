@@ -8,6 +8,8 @@ import Constants from "../misc/Constants";
 import Colour from "../assets/Colour";
 import LanguageSelector from "../screen/LanguageSelector";
 import Login from "../screen/Login";
+import Register from "../screen/Register";
+import TestScreen from "../screen/TestScreen"
 
 
 
@@ -37,8 +39,17 @@ const AutiNavigator = () => (
         name={Constants.LOGIN_SELECTION} />
 
 
+        <NativeStack.Screen
+        component={Register}   
+        name={Constants.REGISTER_SELECTION} />
 
 
+
+
+
+<NativeStack.Screen
+        component={TestScreen}   
+        name="Test" />
 
             
     </NativeStack.Navigator>

@@ -1,4 +1,4 @@
-import { View, Image, StyleSheet } from 'react-native'
+import { View, Image, StyleSheet, ActivityIndicator } from 'react-native'
 import React from 'react'
 import Colour from '../assets/Colour';
 
@@ -7,7 +7,7 @@ export default function AppLoading({visiblility}) {
 
   return (
     <View style={style.container}>
-      <Image style={style.loadingImg} source={require("../assets/english.png")}/>
+      <ActivityIndicator style={style.loadingImg} size={60}/>
     </View>
   )
 }
@@ -25,8 +25,8 @@ const style = StyleSheet.create({
     },
     loadingImg:{
         zIndex: 999,
-        width: 50,
-        height: 50,
+        width: 150,
+        height: 150,
     }
 })
 

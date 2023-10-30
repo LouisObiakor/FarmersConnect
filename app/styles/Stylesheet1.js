@@ -69,7 +69,7 @@ const styleApp = StyleSheet.create({
         width: "90%",
         alignSelf: "center",
         alignItems: "center",
-        height: 450,
+        paddingBottom:50,
         marginTop: -70,
         paddingTop: 20,
         backgroundColor: Colour.white,
@@ -82,6 +82,7 @@ const styleApp = StyleSheet.create({
         shadowOffset: {width: -2, height: 4},
         shadowOpacity: 0.2,
         shadowRadius: 3,
+        //
     },
 
 
@@ -121,6 +122,7 @@ const styleApp = StyleSheet.create({
         flexDirection: "row",
         justifyContent:'center',
         paddingLeft: 20,
+        paddingRight: 10,
         
       },
       formErr:{

@@ -7,38 +7,33 @@ import Colour from "../assets/Colour";
 
 
 
-export  default useFormApi = (apiCaller) => {
+export  default useFormApi = () => {
 
     const [loading, setLoading] = useState(false);
-    const [noNetworkAlert, setNetworkAlert] = useState(false);
     const [notificationAlert, setNotificationAlert] = useState(false);
     const [notificationText, setNotificationText] = useState("");
     const [notificationTextColor, setNotificationTextColor] = useState(Colour.white);
-    const [responseData, setResponseData] = useState([]);
 
 
     const checkNetwork = () => {
         return CheckNetwork
     }
 
-    const sendDataToServer = async (data) => {
-         const response = await apiCaller(data);
-        setResponseData(response);
+
+    const setNotifier = (notiText, notiColor, notiVisibility, isLoading) => {
+        setNotificationText(notiText);
+        setNotificationTextColor(notiColor);
+        setNotificationAlert(notiVisibility);
+        setLoading(isLoading);
     }
 
 
 return {
     checkNetwork,
     loading,
-    setLoading,
-    noNetworkAlert,
     notificationAlert,
-    setNotificationAlert,
     notificationText,
-    setNotificationText,
-    sendDataToServer,
     notificationTextColor,
-    setNotificationTextColor,
-    responseData,
+    setNotifier,
 }
 }
